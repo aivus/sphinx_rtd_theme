@@ -102,9 +102,9 @@ html
     border-top: solid 1px darken($menu-vertical-background-color, 20%)
 
   // This is the on state for pages beyond second level
-  li.toctree-l2 a, li.toctree-l3 a, li.toctree-l4 a
+  li.toctree-l2 a, li.toctree-l3 a, li.toctree-l4 a, li.toctree-l5 a, li.toctree-l6 a
     color: $menu-link-color
-  li.toctree-l1.current li.toctree-l2, li.toctree-l2.current li.toctree-l3
+  li.toctree-l1.current li.toctree-l2, li.toctree-l2.current li.toctree-l3, li.toctree-l3.current li.toctree-l4, li.toctree-l4.current li.toctree-l5
     > ul
       display: none
     &.current > ul
@@ -137,6 +137,34 @@ html
     span.toctree-expand
       color: darken($menu-vertical-background-color, 40%)
   li.toctree-l4
+    font-size: .9em
+    &.current
+      > a
+        background: darken($menu-vertical-background-color, 30%)
+        padding: $gutter / 4 $gutter * 3.5
+      li.toctree-l5 > a
+        display: block
+        background: darken($menu-vertical-background-color, 30%)
+        padding: $gutter / 4 $gutter * 4.5
+    a:hover span.toctree-expand
+      color: $menu-link-medium
+    span.toctree-expand
+      color: darken($menu-vertical-background-color, 45%)
+  li.toctree-l5
+    font-size: .9em
+    &.current
+      > a
+        background: darken($menu-vertical-background-color, 35%)
+        padding: $gutter / 4 $gutter * 4.5
+      li.toctree-l6 > a
+        display: block
+        background: darken($menu-vertical-background-color, 35%)
+        padding: $gutter / 4 $gutter * 5.5
+    a:hover span.toctree-expand
+      color: $menu-link-medium
+    span.toctree-expand
+      color: darken($menu-vertical-background-color, 50%)
+  li.toctree-l6
     font-size: .9em
 
   li.current ul
